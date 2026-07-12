@@ -42,10 +42,17 @@ export type ExperienceEntry = {
 
 export type OpenSourceContribution = {
   id: string;
-  kind: "repository" | "pull-request" | "issue" | "highlight" | "activity";
-  title: string;
-  url: NullableUrl;
-  description: string | null;
+  repository: string;
+  contributionTitle: string;
+  description: string;
+  contributionType: string;
+  status: string;
+  technologies: readonly string[];
+  repositoryUrl: NullableUrl;
+  contributionUrl: NullableUrl;
+  date: string | null;
+  featured: boolean;
+  displayOrder: number;
 };
 
 export type OpenSourceData = {

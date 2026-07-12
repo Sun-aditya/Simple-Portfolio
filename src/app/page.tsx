@@ -1,5 +1,6 @@
 import { PageShell } from "@/components/layout/page-shell";
 import { AboutSection } from "@/components/sections/about-section";
+import { OpenSourceSection } from "@/components/sections/open-source-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 
 export default function Home() {
@@ -9,16 +10,7 @@ export default function Home() {
 
       <div className="shell-section-stack">
         <ProjectsSection />
-        <PlaceholderSection
-          id="experience"
-          title="Experience"
-          description="Development placeholder for future factual experience content."
-        />
-        <PlaceholderSection
-          id="open-source"
-          title="Open Source"
-          description="Development placeholder for future contribution data."
-        />
+        <OpenSourceSection />
         <PlaceholderSection
           id="writing"
           title="Writing"
