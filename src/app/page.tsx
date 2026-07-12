@@ -1,5 +1,6 @@
 import { PageShell } from "@/components/layout/page-shell";
 import { AboutSection } from "@/components/sections/about-section";
+import { ProjectsSection } from "@/components/sections/projects-section";
 
 export default function Home() {
   return (
@@ -7,11 +8,7 @@ export default function Home() {
       <AboutSection />
 
       <div className="shell-section-stack">
-        <PlaceholderSection
-          id="projects"
-          title="Projects"
-          description="Development placeholder for the future project collection."
-        />
+        <ProjectsSection />
         <PlaceholderSection
           id="experience"
           title="Experience"
