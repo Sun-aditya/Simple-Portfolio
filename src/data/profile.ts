@@ -1,0 +1,2 @@
+import type { Profile } from "@/types/portfolio";
+export const profile: Profile = { name: "Aditya Maurya", heading: "Hey, I'm Aditya.", positioning: "Computer Science student interested in Software Engineering, Backend Development, DevOps, Developer Tools, and Open Source.", interests: ["Software Engineering", "Backend Development", "DevOps", "Developer Tools", "Open Source"], education: "Chitkara University Institute of Engineering & Technology" };
