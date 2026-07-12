@@ -64,11 +64,50 @@ export type WritingArticle = {
   id: string;
   slug: string;
   title: string;
-  excerpt: string | null;
+  summary: string | null;
   publishedAt: string | null;
   readingTime: string | null;
   tags: readonly string[];
   url: NullableUrl;
+  displayOrder: number;
+};
+
+export type Testimonial = {
+  id: string;
+  name: string;
+  relationship: string;
+  testimonial: string;
+  image: NullableUrl;
+  imageAlt: string | null;
+  profileUrl: NullableUrl;
+  displayOrder: number;
+};
+
+export type SocialPost = {
+  id: string;
+  platform: string;
+  author: string;
+  handle: string | null;
+  text: string;
+  date: string | null;
+  image: NullableUrl;
+  imageAlt: string | null;
+  video: NullableUrl;
+  postUrl: NullableUrl;
+  likes: number | null;
+  comments: number | null;
+  reposts: number | null;
+  views: number | null;
+  featured: boolean;
+  displayOrder: number;
+};
+
+export type Launcher = {
+  id: string;
+  label: string;
+  description: string;
+  ariaLabel: string;
+  displayOrder: number;
 };
 
 export type SocialLinks = {

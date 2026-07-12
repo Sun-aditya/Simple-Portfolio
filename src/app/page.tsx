@@ -1,7 +1,11 @@
 import { PageShell } from "@/components/layout/page-shell";
 import { AboutSection } from "@/components/sections/about-section";
+import { ContactSection } from "@/components/sections/contact-section";
 import { OpenSourceSection } from "@/components/sections/open-source-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
+import { SocialWallSection } from "@/components/sections/social-wall-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { WritingSection } from "@/components/sections/writing-section";
 
 export default function Home() {
   return (
@@ -11,37 +15,11 @@ export default function Home() {
       <div className="shell-section-stack">
         <ProjectsSection />
         <OpenSourceSection />
-        <PlaceholderSection
-          id="writing"
-          title="Writing"
-          description="Development placeholder for future technical writing."
-        />
-        <PlaceholderSection
-          id="contact"
-          title="Contact"
-          description="Development placeholder for future contact links."
-        />
+        <WritingSection />
+        <TestimonialsSection />
+        <SocialWallSection />
+        <ContactSection />
       </div>
     </PageShell>
-  );
-}
-
-function PlaceholderSection({
-  id,
-  title,
-  description,
-}: Readonly<{ id: string; title: string; description: string }>) {
-  const headingId = `${id}-heading`;
-
-  return (
-    <section
-      id={id}
-      className="shell-section shell-section--placeholder"
-      aria-labelledby={headingId}
-    >
-      <p className="eyebrow">Phase 2 placeholder</p>
-      <h2 id={headingId}>{title}</h2>
-      <p>{description}</p>
-    </section>
   );
 }
