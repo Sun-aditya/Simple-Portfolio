@@ -12,7 +12,6 @@ export function SocialWallSection() {
     >
       <h2 id="socialwall-heading">#socialwall</h2>
       <p className="social-wall-section__intro">
-        Sample posts for future social content, curated to keep the layout honest while the real feed is still taking shape.
       </p>
       <div className="social-wall-grid">
         {orderedPosts.map((post) => (

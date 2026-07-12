@@ -44,8 +44,15 @@ function ContactItem({ label, href, children }: ContactItemProps) {
     return <div className="contact-icons__card">{content}</div>;
   }
 
+  const isExternalLink = href.startsWith("http://") || href.startsWith("https://") || href.startsWith("mailto:");
+
   return (
-    <a className="contact-icons__card" href={href} target="_blank" rel="noreferrer">
+    <a
+      className="contact-icons__card"
+      href={href}
+      target={isExternalLink ? "_blank" : undefined}
+      rel={isExternalLink ? "noreferrer" : undefined}
+    >
       {content}
     </a>
   );

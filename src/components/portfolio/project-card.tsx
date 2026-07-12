@@ -12,6 +12,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const statusLabel =
     project.status === "unknown" ? null : statusLabels[project.status];
   const metadata = project.metric ?? statusLabel;
+  const isExternalLink = (href: string) => href.startsWith("http://") || href.startsWith("https://") || href.startsWith("mailto:");
   const actions = [
     {
       href: project.githubUrl,
@@ -53,8 +54,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <a
               key={action.label}
               href={action.href}
-              target="_blank"
-              rel="noreferrer"
+              target={isExternalLink(action.href) ? "_blank" : undefined}
+              rel={isExternalLink(action.href) ? "noreferrer" : undefined}
               aria-label={action.ariaLabel}
             >
               {action.label}
